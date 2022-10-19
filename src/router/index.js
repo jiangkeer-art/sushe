@@ -50,7 +50,7 @@ const routes = [
                 component: AbsentRegister
             },
             {
-                path: '/about',
+                path: '/about2',
                 name: '关于',
                 component: About
             }

@@ -34,7 +34,7 @@
             <span slot="title">学生缺寝记录</span>
           </el-menu-item>
 
-          <el-menu-item index="/about">
+          <el-menu-item index="/about2">
             <i class="el-icon-info"></i>
             <span slot="title">关于</span>
           </el-menu-item>
