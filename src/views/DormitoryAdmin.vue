@@ -34,6 +34,11 @@
             <span slot="title">学生缺寝记录</span>
           </el-menu-item>
 
+          <el-menu-item index="/moveoutRegister">
+            <i class="el-icon-s-unfold"></i>
+            <span slot="title">学生迁出登记</span>
+          </el-menu-item>
+
           <el-menu-item index="/about2">
             <i class="el-icon-info"></i>
             <span slot="title">关于</span>

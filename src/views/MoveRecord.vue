@@ -52,6 +52,15 @@
           prop="createDate"
           label="迁出日期">
       </el-table-column>
+      <el-table-column label="操作" width="120" align="center">
+          <template slot-scope="scope">
+            <el-button
+                size="mini"
+                type="danger"
+                @click="moveout(scope.row)">迁出确认
+            </el-button>
+          </template>
+        </el-table-column>
     </el-table>
     <el-pagination style="margin-top: 20px;float: right"
                    background
@@ -119,7 +128,25 @@ export default {
           _this.total = resp.data.data.total
         })
       }
-
+    },
+    moveout(row) {
+      const _this = this
+      this.$confirm('确认迁出吗？'+row.id, '提示', {
+        confirmButtonText: '确定',
+        cancelButtonText: '取消',
+        type: 'warning'
+      }).then(() => {
+        axios.delete('http://localhost:9090/moveout/deleteById/' + row.id).then(function (resp) {
+          if (resp.data.code === 0) {
+            _this.$alert('已迁出', '', {
+              confirmButtonText: '确定',
+              callback: action => {
+                location.reload()
+              }
+            });
+          }
+        });
+      });
     }
   },
   created() {

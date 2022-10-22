@@ -50,6 +50,11 @@ const routes = [
                 component: AbsentRegister
             },
             {
+                path: '/moveoutRegister',
+                name: '迁出登记',
+                component: MoveoutRegister
+            },
+            {
                 path: '/about2',
                 name: '关于',
                 component: About
@@ -127,11 +132,6 @@ const routes = [
                 path: '/dormitoryUpdate',
                 name: '修改宿舍',
                 component: DormitoryUpdate
-            },
-            {
-                path: '/moveoutRegister',
-                name: '迁出登记',
-                component: MoveoutRegister
             },
             {
                 path: '/moveoutRecord',
