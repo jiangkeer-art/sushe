@@ -2,9 +2,6 @@
   <!--  修改宿管-->
   <div style="margin-top: 60px;margin-left:330px;width: 300px;height: 500px;border: 0 solid red;">
     <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
-      <el-form-item label="ID">
-        <el-input v-model="ruleForm.id" readonly></el-input>
-      </el-form-item>
       <el-form-item label="用户名" prop="username">
         <el-input v-model="ruleForm.username"></el-input>
       </el-form-item>
